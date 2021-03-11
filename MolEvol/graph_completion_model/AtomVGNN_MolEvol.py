@@ -4,8 +4,8 @@ import rdkit.Chem as Chem
 import torch.nn.functional as F
 from multiobj_rationale.fuseprop.mol_graph import MolGraph
 from multiobj_rationale.fuseprop.encoder import GraphEncoder
-# from mol_finder.graph_completion_model.decoder_ours import GraphDecoder_ours
-from mol_finder.graph_completion_model.decoder_MolEvol import GraphDecoder_ours
+# from MolEvol.graph_completion_model.decoder_ours import GraphDecoder_ours
+from MolEvol.graph_completion_model.decoder_MolEvol import GraphDecoder_ours
 from multiobj_rationale.fuseprop.nnutils import *
 import numpy as np
 

@@ -7,9 +7,9 @@ from rdkit import Chem
 from multiprocessing import Pool
 from multiobj_rationale.properties import gsk3_model, jnk3_model
 from multiobj_rationale.mcts import mcts
-from mol_finder.common.fingerprint import get_fingerprint_as_array, select_atoms, extract_selected_subgraph, \
+from MolEvol.common.fingerprint import get_fingerprint_as_array, select_atoms, extract_selected_subgraph, \
     extract_selected_subgraph_for_gcn
-from mol_finder.common.parse_args import args
+from MolEvol.common.parse_args import args
 from multiobj_rationale.properties import qed_func, sa_func
 
 # silence sklearn warnings
@@ -95,7 +95,7 @@ def local_for_one_molecule(smiles_idx, num_rounds):
 
     assert args.l2x_gcn
     if args.l2x_gcn:
-        from mol_finder.explainer.explain import L2X_explain
+        from MolEvol.explainer.explain import L2X_explain
         onbit_list, importance_list = L2X_explain(smiles)
 
     tot = sum(importance_list)

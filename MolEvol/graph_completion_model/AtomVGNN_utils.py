@@ -2,7 +2,7 @@ import sys
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 from multiobj_rationale.fuseprop import *
-from mol_finder.graph_completion_model.AtomVGNN_MolEvol import AtomVGNN_ours
+from MolEvol.graph_completion_model.AtomVGNN_MolEvol import AtomVGNN_ours
 
 
 def load_model(model_args):

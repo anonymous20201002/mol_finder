@@ -2,7 +2,7 @@ import torch.nn as nn
 import torch.optim as optim
 import torch.optim.lr_scheduler as lr_scheduler
 from torch.utils.data import DataLoader
-from mol_finder.common.fingerprint import largest_connected_subgraph
+from MolEvol.common.fingerprint import largest_connected_subgraph
 import numpy as np
 import sys
 import math
@@ -12,9 +12,9 @@ from multiobj_rationale.finetune import remove_order
 from multiobj_rationale.properties import get_scoring_function
 from multiobj_rationale.fuseprop import *
 from rdkit.Chem import AllChem
-from mol_finder.common import props_short, props_long
+from MolEvol.common import props_short, props_long
 
-from mol_finder.common.parse_args import args
+from MolEvol.common.parse_args import args
 
 
 def get_shaping_scores(scores, shaping_lambda=args.shaping_lambda):

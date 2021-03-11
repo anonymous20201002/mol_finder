@@ -3,11 +3,11 @@ import numpy as np
 import rdkit
 from rdkit import RDLogger
 
-from mol_finder.common.parse_args import args
-from mol_finder.common import update_args, get_properties
-from mol_finder.common.eval import eval_all_v4
-from mol_finder.graph_completion_model import *
-from mol_finder.graph_completion_model.finetune import score_func
+from MolEvol.common.parse_args import args
+from MolEvol.common import update_args, get_properties
+from MolEvol.common.eval import eval_all_v4
+from MolEvol.graph_completion_model import *
+from MolEvol.graph_completion_model.finetune import score_func
 
 import torch
 
@@ -104,7 +104,7 @@ if __name__ == '__main__':
     print(args)
 
     os.makedirs(args.exp_dir, exist_ok=True)
-    cmd = 'cp -r mol_finder {}'.format(args.exp_dir)
+    cmd = 'cp -r MolEvol {}'.format(args.exp_dir)
     print("Moving main files to {}...".format(args.exp_dir))
     os.system(cmd)
     with open('{}/config'.format(args.exp_dir), 'w') as g:

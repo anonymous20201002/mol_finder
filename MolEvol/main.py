@@ -2,15 +2,15 @@ from shutil import copyfile
 import numpy as np
 import rdkit
 from rdkit import RDLogger
-from mol_finder.local_search import do_local_search_disc
+from MolEvol.local_search import do_local_search_disc
 
-from mol_finder.common.parse_args import args
-from mol_finder.common import update_args
-from mol_finder.graph_completion_model import *
-from mol_finder.graph_completion_model.finetune import score_func
+from MolEvol.common.parse_args import args
+from MolEvol.common import update_args
+from MolEvol.graph_completion_model import *
+from MolEvol.graph_completion_model.finetune import score_func
 
 from multiobj_rationale.properties import get_scoring_function
-from mol_finder.graph_completion_model.finetune import filter_novel_cand_mols, remove_order, qed_sa_func, props_long
+from MolEvol.graph_completion_model.finetune import filter_novel_cand_mols, remove_order, qed_sa_func, props_long
 
 
 def scr_filter(cand_mols):
@@ -94,7 +94,7 @@ def collect_mol(mol_file_list):
     return mol_corpus
 
 
-from mol_finder.eval import eval_molevol
+from MolEvol.eval import eval_molevol
 
 
 def main(args):
@@ -157,7 +157,7 @@ if __name__ == '__main__':
     print(args)
 
     os.makedirs(args.exp_dir, exist_ok=True)
-    cmd = 'cp -r mol_finder {}'.format(args.exp_dir)
+    cmd = 'cp -r MolEvol {}'.format(args.exp_dir)
     print("Moving main files to {}...".format(args.exp_dir))
     os.system(cmd)
     with open('{}/config'.format(args.exp_dir), 'w') as g:

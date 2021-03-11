@@ -1,1 +1,0 @@
-from mol_finder.local_search.local_searcher_explain import do_local_search_disc

@@ -1,6 +1,6 @@
 from rdkit import Chem, DataStructs
 from rdkit.Chem import AllChem
-from mol_finder.graph_completion_model.finetune import score_func
+from MolEvol.graph_completion_model.finetune import score_func
 
 normal_func = lambda x: (x[0]) >= 0.5 and float(x[1]) >= 0.5 and float(x[2]) > 0.6 and float(x[3]) < 4
 topk_func = lambda x: score_func(x) >= 0.5
@@ -176,7 +176,7 @@ def get_qu(sgs_tuples, ref_path):
     print('QU {} -> {}'.format(len(sgs_tuples), len(novel_tuples)))
 
     # import torch
-    # from mol_finder.common.parse_args import args
+    # from MolEvol.common.parse_args import args
     # torch.save(novel_tuples, '{}/GU_tuples'.format(args.iter_dir))
 
     return len(novel_tuples) / len(sgs_tuples)

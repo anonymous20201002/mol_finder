@@ -233,7 +233,7 @@ def largest_connected_subgraph(smiles):
 
 
 if __name__ == '__main__':
-    from mol_finder.common import args, mkdir
+    from MolEvol.common import args, mkdir
 
     vis_dir = args.visualize_dir
     mkdir(vis_dir)

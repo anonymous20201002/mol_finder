@@ -134,7 +134,7 @@ def softmax_with_temperature(x, t=50):
     return e_x / e_x.sum(axis=0)
 
 
-from mol_finder.explainer.utils import get_graph
+from MolEvol.explainer.utils import get_graph
 
 
 def L2X_explain(smiles):
