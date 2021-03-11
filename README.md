@@ -6,13 +6,18 @@
         year={2021}
     }
 
-Project for finding synthesizable molecules with multiple properties.
 
 ## Overview
 We release the PyTorch code for the MolEvol. [[Paper](https://openreview.net/pdf?id=jHefDGsorp5)]:
 <p align="center">
   <img src="figures/overview.png" width=800>
 </p>
+
+### Details for Graph Explanation Process 
+<p align="center">
+  <img src="figures/explainer.png" width=600>
+</p>
+
 
 ## Install Dependencies
 You should install dependencies for chemprop and multiobj-rationale first.
@@ -33,7 +38,7 @@ You should install dependencies for chemprop and multiobj-rationale first.
     cd ../mol_finder
     
 ## How to Use
-For instance, if you want to optimize jnk3,gsk3,QED,SA for the molecules jointly.
+For instance, if you want to jointly optimize jnk3, gsk3, QED, SA for the molecules.
 
 Run the following command:
 
